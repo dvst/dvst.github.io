@@ -1,0 +1,8 @@
+Incluir social: canal de youtube
+                stackoverflow
+                github/bitbucket
+
+
+conocimientos misc: chef
+                    docker
+                    jenkins
