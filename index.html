@@ -37,6 +37,12 @@
             margin-right: auto;
         }
 
+        #body h1 {
+            text-align: center;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            font-size: 2em;
+        }
+
         article {
             color: aquamarine;
         }
@@ -61,6 +67,7 @@
             border-radius: 5px;
             text-decoration: none;
             font-size: 14px;
+            margin: 1px;
         }
         
         .linkedin { background-color: #0077B5; }
@@ -68,26 +75,48 @@
         .twitter { background-color: #1DA1F2; }
         .github { background-color: #333; }
         
+        .profile-container {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+
+        .profile-container img {
+            /* margin-right: 10px; */
+            margin-left: 0;
+            margin-right: 0;
+        }
     </style>
     <link rel="stylesheet" href="./assets/fontawesome-free-6.5.2-web/css/all.min.css">
 </head>
 <body>
     <div id="body">
     <h1>Javier Perez</h1>
-    <section>
-        <h2>About me</h2>
-        <article>
-            <p>I help companies and individuals on software architecture 
-                solutions, taking into account security, scalability, 
-                resilience and cost optimization.</p>
+    <div class="profile-container">
+        <img src="./assets/images/javitech_co.png" alt="Profile Image" style="width: 150px; border-radius: 50%;">
+        <section>
+            <h2>About me</h2>
+            <article>
+                <p>I help companies and individuals on software architecture 
+                    solutions, taking into account security, scalability, 
+                    resilience and cost optimization.</p>
 
-            <p>From a young age, I've been immersed in technology, 
-                exploring its inner workings and honing my problem-solving 
-                skills. With over 15 years of experience in IT, including 
-                roles as a DevOps Cloud Engineer and Senior Site Reliability 
-                Engineer, I've thrived in complex, dynamic environments.</p>
-        </article>
-    </section>
+                <p>From a young age, I've been immersed in technology, 
+                    exploring its inner workings and honing my problem-solving 
+                    skills. With over 15 years of experience in IT, including 
+                    roles as a DevOps Cloud Engineer and Senior Site Reliability 
+                    Engineer, I've thrived in complex, dynamic environments.</p>
+            </article>
+        </section>
+    </div>
     <section>        
         <h2>Interests</h2>
         <article>
