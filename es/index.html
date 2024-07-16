@@ -65,5 +65,61 @@
         </article>
     </section>
 </div>
+<div id="cookieConsentBanner" style="display: none; position: fixed; bottom: 0; width: 100%; background: #000; color: #fff; text-align: center; padding: 10px;">
+    Este sitio web utiliza cookies para garantizar que obtenga la mejor experiencia en nuestro sitio web.
+    <a href="/es/politica-privacidad.html" style="color: #0f9d58;">Conozca mas</a>
+    <button onclick="acceptCookies()" style="margin-left: 15px; background-color: #4CAF50; color: white; border: none; padding: 10px 20px;">Aceptar</button>
+    <button onclick="declineCookies()" style="background-color: #f44336; color: white; border: none; padding: 10px 20px;">Rechazar</button>
+</div>
+<script>
+    window.onload = function() {
+        if (!getCookie("cookieConsent")) {
+            document.getElementById("cookieConsentBanner").style.display = "block";
+        }
+    };
+
+    function acceptCookies() {
+        setCookie("cookieConsent", "accepted", 365);
+        document.getElementById("cookieConsentBanner").style.display = "none";
+        // Initialize analytics tracking here, as consent is given
+            var _paq = window._paq = window._paq || [];
+            /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+            _paq.push(['trackPageView']);
+            _paq.push(['enableLinkTracking']);
+            (function() {
+            var u="//matomo.javitech.co/matomo/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+            })();
+    }
+
+    function declineCookies() {
+        document.getElementById("cookieConsentBanner").style.display = "none";
+        // Ensure tracking scripts are not initialized
+    }
+
+    function setCookie(name, value, days) {
+        var expires = "";
+        if (days) {
+            var date = new Date();
+            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+            expires = "; expires=" + date.toUTCString();
+        }
+        document.cookie = name + "=" + (value || "")  + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+        var nameEQ = name + "=";
+        var ca = document.cookie.split(';');
+        for(var i=0;i < ca.length;i++) {
+            var c = ca[i];
+            while (c.charAt(0)==' ') c = c.substring(1,c.length);
+            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length,c.length);
+        }
+        return null;
+    }
+</script>
 </body>
 </html>
