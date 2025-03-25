@@ -92,6 +92,48 @@
         <iframe width="560" height="315" src="https://www.youtube.com/embed/o2aGT5SJeJI?si=D8FjLz5VZOsjCAci&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </section>
 </div>
+<footer class="extended-footer">
+    <div class="footer-container">
+        <div class="footer-column">
+            <h3>Connect with me</h3>
+            <ul class="social-links">
+                <li><a href="https://youtube.com/@javitech_co?sub_confirmation=1" target="_blank"><i class="fab fa-youtube"></i> YouTube</a></li>
+                <li><a href="https://twitter.com/intent/user?screen_name=javitech_co" target="_blank"><i class="fab fa-twitter"></i> Twitter</a></li>
+                <li><a href="https://github.com/dvst" target="_blank"><i class="fab fa-github"></i> GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/javierperezp" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a></li>
+                <li><a href="https://www.patreon.com/c/javitech_co" target="_blank"><i class="fab fa-patreon"></i> Patreon</a></li>
+                <li><a href="https://www.instagram.com/javitech_co" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
+                <li><a href="https://dev.to/javitech_co" target="_blank"><i class="fas fa-blog"></i>Blog</a></li>
+                <!-- <li><a href="https://community.aws/@javitech" target="_blank"><i class="fas fa-blog"></i>AWS Related topics Blog</a></li> -->
+            </ul>
+        </div>
+        <div class="footer-column">
+            <h3>Newsletter</h3>
+            <form id="newsletter-form" class="footer-form">
+                <p>Subscribe to get the latest updates and news.</p>
+                <div class="form-group">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn-subscribe">Subscribe</button>
+                </div>
+            </form>
+        </div>
+        <div class="footer-column">
+            <h3>Contact Me</h3>
+            <form id="contact-form" class="footer-form">
+                <div class="form-group">
+                    <input type="text" id="contact-name" placeholder="Your name" required>
+                </div>
+                <div class="form-group">
+                    <input type="email" id="contact-email" placeholder="Your email" required>
+                </div>
+                <div class="form-group">
+                    <textarea id="contact-message" placeholder="Your message" required></textarea>
+                </div>
+                <button type="submit" class="btn-send">Send Message</button>
+            </form>
+        </div>
+    </div>
+</footer>
 <div id="cookieConsentBanner" style="display: none; position: fixed; bottom: 0; width: 100%; background: #000; color: #fff; text-align: center; padding: 10px;">
     This website uses cookies to ensure you get the best experience on our website.
     <a href="/privacy-policy.html" style="color: #0f9d58;">Learn More</a>
@@ -148,5 +190,110 @@
         return null;
     }
 </script>
+<style>
+.extended-footer {
+    background-color: #17202A;
+    color: #fff;
+    padding: 3rem 0;
+    margin-top: 4rem;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 0 1rem;
+}
+
+.footer-column {
+    padding: 1rem;
+}
+
+.footer-column h3 {
+    color: #fff;
+    margin-bottom: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.social-links {
+    list-style: none;
+    padding: 0;
+}
+
+.social-links li {
+    margin-bottom: 0.8rem;
+}
+
+.social-links a {
+    color: #fff;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #0f9d58;
+}
+
+.footer-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.footer-form input,
+.footer-form textarea {
+    padding: 0.8rem;
+    border: 1px solid #333;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+}
+
+.footer-form textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+.btn-subscribe,
+.btn-send {
+    padding: 0.8rem 1.5rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #0f9d58;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-subscribe:hover,
+.btn-send:hover {
+    background-color: #0b8043;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-column {
+        text-align: center;
+    }
+    
+    .social-links a {
+        justify-content: center;
+    }
+}
+</style>
 </body>
 </html>
