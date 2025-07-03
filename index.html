@@ -7,8 +7,8 @@
     <meta name="author" content="Javier Perez">
     <meta name="robots" content="index, follow">
     <meta name="googlebot" content="index, follow">
-    <meta name="theme-color" content="#17202A">
-    <meta name="twitter:card" content="summary">
+    <meta name="theme-color" content="#0066ff">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@javitech_co">
     <meta name="twitter:creator" content="@javitech_co">
     <meta name="twitter:title" content="Javier Perez - Site Reliability Engineer">
@@ -18,80 +18,123 @@
     <meta property="og:description" content="I am Javier Perez (Javitech), an expert in DevOps, SRE, and Solution Architect with years of experience in infrastructure optimization and the development of efficient technological solutions. Discover how I can help you transform and scale your business with customized solutions.">
     <meta property="og:image" content="https://javitech.co/assets/images/javitech_co.png">
     <meta property="og:url" content="https://javitech.co">
+    <meta property="og:type" content="website">
     <meta name="description" content="I am Javier Perez (Javitech), an expert in DevOps, SRE, and Solution Architect with years of experience in infrastructure optimization and the development of efficient technological solutions. Discover how I can help you transform and scale your business with customized solutions.">
     <meta name="keywords" content="javier perez devops aws gcp azure sre site reliability engineer certification cloud pipeline infrastructure planning security cost optimization performance automation architect ai dora kubernetes amazon web services docker containers git security ux usability">
-    <link rel="stylesheet" href="./assets/css/main.css">
+    
+    <!-- Preload critical resources -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Modern CSS -->
+    <link rel="stylesheet" href="./assets/css/modern.css">
     <link rel="stylesheet" href="./assets/fontawesome-free-6.5.2-web/css/all.min.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/images/javitech_co.png">
 </head>
 <body>
     <nav class="navbar">
-    <a href="es/index.html">🇪🇸 Español</a> 
-    <a href="./say-thanks.html">Say thanks ♥️</a>
-            <!-- Google Calendar Appointment Scheduling begin -->
-<link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
-<script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
-<script>
-(function() {
-  var target = document.currentScript;
-  window.addEventListener('load', function() {
-    calendar.schedulingButton.load({
-      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0Xg_N8D_Y-CWs5CAQ1FhAB5Hp1yNCgtoZxeQLC67XPT-L-Cwq-7SjljZmj8BKZOd_Z7fMC3AUI?gv=true',
-      color: '#039BE5',
-      label: "Let's talk",
-      target,
-    });
-  });
-})();
-</script>
-<!-- end Google Calendar Appointment Scheduling -->
-</nav>
+        <div class="navbar-container">
+            <div class="nav-links">
+                <a href="es/index.html"><i class="fas fa-globe"></i> Español</a> 
+                <a href="./say-thanks.html"><i class="fas fa-heart"></i> Say thanks</a>
+            </div>
+            <div class="nav-cta">
+                <!-- Google Calendar Appointment Scheduling begin -->
+                <link href="https://calendar.google.com/calendar/scheduling-button-script.css" rel="stylesheet">
+                <script src="https://calendar.google.com/calendar/scheduling-button-script.js" async></script>
+                <script>
+                (function() {
+                  var target = document.currentScript;
+                  window.addEventListener('load', function() {
+                    calendar.schedulingButton.load({
+                      url: 'https://calendar.google.com/calendar/appointments/schedules/AcZssZ0Xg_N8D_Y-CWs5CAQ1FhAB5Hp1yNCgtoZxeQLC67XPT-L-Cwq-7SjljZmj8BKZOd_Z7fMC3AUI?gv=true',
+                      color: '#0066ff',
+                      label: "Let's talk",
+                      target,
+                    });
+                  });
+                })();
+                </script>
+                <!-- end Google Calendar Appointment Scheduling -->
+            </div>
+        </div>
+    </nav>
 
-    <div id="body">
-    <h1>Javier Perez</h1>
-    <div class="profile-container">
-        <img src="./assets/images/javitech_co.png" alt="Profile Image" style="width: 150px; border-radius: 50%;">
-        <section>
-            <h2>About me</h2>
-            <article>
-                <p>I help companies and individuals on software architecture solutions taking into account security, scalability, resilience and cost optimization.</p>
-
-                <p>From a young age I've been immersed in technology exploring its inner workings and honing my problem-solving skills. With over 15 years of experience in IT including roles as a DevOps Cloud Engineer and Senior Site Reliability Engineer I've thrived in complex dynamic environments.</p>
-            </article>
+    <main id="body">
+        <!-- Hero Section -->
+        <section class="hero-section">
+            <h1 class="hero-title">Javier Perez</h1>
+            <p class="hero-subtitle">Site Reliability Engineer & DevOps Expert</p>
         </section>
-    </div>
-    <section>        
-        <h2>Interests</h2>
-        <article>
-            <p>
-                <span class="tag">System design</span>
+
+        <!-- Profile Section -->
+        <section class="profile-container">
+            <img src="./assets/images/javitech_co.png" alt="Javier Perez Profile" class="profile-image">
+            <div class="profile-content">
+                <h2>About me</h2>
+                <p>I help companies and individuals on software architecture solutions taking into account security, scalability, resilience and cost optimization.</p>
+                <p>From a young age I've been immersed in technology exploring its inner workings and honing my problem-solving skills. With over 15 years of experience in IT including roles as a DevOps Cloud Engineer and Senior Site Reliability Engineer I've thrived in complex dynamic environments.</p>
+            </div>
+        </section>
+        <!-- Interests Section -->
+        <section class="card">        
+            <h2><i class="fas fa-code"></i> Interests & Expertise</h2>
+            <div class="tags-container">
+                <span class="tag">System Design</span>
                 <span class="tag">AWS</span>
                 <span class="tag">Infrastructure as Code</span>
                 <span class="tag">CI/CD</span>
                 <span class="tag">Security</span>
                 <span class="tag">User Experience</span>
-                <span class="tag">Artificial Inteligence</span>
-            </p>
-        </article>
-    </section>
-    <section>
-        <p>You can follow tech and business events on <a target="_blank" href="http://agenda.javitech.co/">agenda.javitech.co</a></p>
-    </section>
-    <section>
-        <h2>Contact information</h2>
-        <article>
+                <span class="tag">Artificial Intelligence</span>
+            </div>
+        </section>
+
+        <!-- Agenda Section -->
+        <section class="card">
+            <h2><i class="fas fa-calendar-alt"></i> Tech Events</h2>
+            <p>Stay updated with the latest tech and business events. Follow my curated agenda for industry insights and networking opportunities.</p>
+            <a href="http://agenda.javitech.co/" target="_blank" class="cta-button mt-4">
+                <i class="fas fa-external-link-alt"></i>
+                View Event Agenda
+            </a>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="card">
+            <h2><i class="fas fa-network-wired"></i> Connect With Me</h2>
+            <p>Let's collaborate on your next project or discuss the latest in DevOps and SRE practices.</p>
             <nav class="contact-info">
-                <a target="_blank" href="https://www.linkedin.com/in/javierperezp" class="badge linkedin"><i class="fab fa-linkedin-in"></i> javierperezp</a>
-                <a target="_blank" href="https://twitter.com/intent/user?screen_name=javitech_co" class="badge twitter"><i class="fab fa-twitter"></i> @javitech_co</a>
-                <a target="_blank" href="https://youtube.com/@javitech_co?sub_confirmation=1" class="badge youtube"><i class="fab fa-youtube"></i> @javitech_co</a>
-                <a target="_blank" href="https://github.com/dvst" class="badge github"><i class="fab fa-github"></i> dvst</a>
+                <a target="_blank" href="https://www.linkedin.com/in/javierperezp" class="badge linkedin">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a target="_blank" href="https://twitter.com/intent/user?screen_name=javitech_co" class="badge twitter">
+                    <i class="fab fa-twitter"></i> Twitter
+                </a>
+                <a target="_blank" href="https://youtube.com/@javitech_co?sub_confirmation=1" class="badge youtube">
+                    <i class="fab fa-youtube"></i> YouTube
+                </a>
+                <a target="_blank" href="https://github.com/dvst" class="badge github">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
             </nav>
-        </article>
-    </section>
-    <section>
-        <h2>Latest YouTube Video</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/o2aGT5SJeJI?si=D8FjLz5VZOsjCAci&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-    </section>
-</div>
+        </section>
+        <!-- Latest Video Section -->
+        <section class="card">
+            <h2><i class="fab fa-youtube"></i> Latest Content</h2>
+            <p class="mb-4">Check out my latest insights on DevOps, SRE practices, and cloud architecture.</p>
+            <div class="video-container">
+                <iframe src="https://www.youtube.com/embed/o2aGT5SJeJI?si=D8FjLz5VZOsjCAci&amp;controls=1" 
+                        title="Latest YouTube Video" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                        referrerpolicy="strict-origin-when-cross-origin" 
+                        allowfullscreen>
+                </iframe>
+            </div>
+        </section>
+    </main>
 <footer class="extended-footer">
     <div class="footer-container">
         <div class="footer-column">
@@ -104,7 +147,6 @@
                 <li><a href="https://www.patreon.com/c/javitech_co" target="_blank"><i class="fab fa-patreon"></i> Patreon</a></li>
                 <li><a href="https://www.instagram.com/javitech_co" target="_blank"><i class="fab fa-instagram"></i> Instagram</a></li>
                 <li><a href="https://dev.to/javitech_co" target="_blank"><i class="fas fa-blog"></i>Blog</a></li>
-                <!-- <li><a href="https://community.aws/@javitech" target="_blank"><i class="fas fa-blog"></i>AWS Related topics Blog</a></li> -->
             </ul>
         </div>
         <div class="footer-column">
@@ -190,110 +232,6 @@
         return null;
     }
 </script>
-<style>
-.extended-footer {
-    background-color: #17202A;
-    color: #fff;
-    padding: 3rem 0;
-    margin-top: 4rem;
-}
-
-.footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-    padding: 0 1rem;
-}
-
-.footer-column {
-    padding: 1rem;
-}
-
-.footer-column h3 {
-    color: #fff;
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
-}
-
-.social-links {
-    list-style: none;
-    padding: 0;
-}
-
-.social-links li {
-    margin-bottom: 0.8rem;
-}
-
-.social-links a {
-    color: #fff;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: color 0.3s ease;
-}
-
-.social-links a:hover {
-    color: #0f9d58;
-}
-
-.footer-form {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-}
-
-.form-group {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-}
-
-.footer-form input,
-.footer-form textarea {
-    padding: 0.8rem;
-    border: 1px solid #333;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
-}
-
-.footer-form textarea {
-    min-height: 100px;
-    resize: vertical;
-}
-
-.btn-subscribe,
-.btn-send {
-    padding: 0.8rem 1.5rem;
-    border: none;
-    border-radius: 4px;
-    background-color: #0f9d58;
-    color: white;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-.btn-subscribe:hover,
-.btn-send:hover {
-    background-color: #0b8043;
-}
-
-@media (max-width: 768px) {
-    .footer-container {
-        grid-template-columns: 1fr;
-    }
-    
-    .footer-column {
-        text-align: center;
-    }
-    
-    .social-links a {
-        justify-content: center;
-    }
-}
-</style>
+    <script src="./assets/js/modern.js"></script>
 </body>
 </html>
