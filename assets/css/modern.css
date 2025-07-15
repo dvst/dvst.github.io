@@ -390,6 +390,15 @@ body {
     color: white;
 }
 
+.discord {
+    background: #5865f2 !important;
+    color: white;
+}
+
+.discord:hover {
+    background: #4752c4 !important;
+}
+
 /* Video section */
 .video-container {
     position: relative;
