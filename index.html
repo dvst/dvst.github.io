@@ -29,6 +29,20 @@
     <!-- Modern CSS -->
     <link rel="stylesheet" href="./assets/css/modern.css">
     <link rel="stylesheet" href="./assets/fontawesome-free-6.5.2-web/css/all.min.css">
+
+    <!-- Noto Sans Lao Looped local font -->
+    <style>
+    @font-face {
+        font-family: 'Noto Sans Lao Looped';
+        src: url('./assets/fonts/noto-sans-lao-looped/NotoSansLaoLooped[wdth,wght].woff') format('woff');
+        font-weight: 400 700;
+        font-style: normal;
+        font-display: swap;
+    }
+    .hero-title {
+        font-family: 'Noto Sans Lao Looped', sans-serif !important;
+    }
+    </style>
     
     <!-- Language switching -->
     <script src="./assets/js/languages.js"></script>
@@ -69,7 +83,7 @@
     <main id="body">
         <!-- Hero Section -->
         <section class="hero-section">
-            <h1 class="hero-title">Javier Perez</h1>
+            <h1 class="hero-title" style="font-family: 'Noto Sans Lao Looped', sans-serif;">Javier Perez</h1>
             <p class="hero-subtitle">Site Reliability Engineer & DevOps Expert</p>
         </section>
 
