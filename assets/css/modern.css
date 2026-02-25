@@ -135,6 +135,146 @@ body {
     position: relative;
 }
 
+/* Presentation Card */
+.presentation-card {
+    max-width: 480px;
+    margin: 0 auto 4rem;
+    background: var(--bg-card);
+    border-radius: 24px;
+    padding: 3rem 2rem;
+    box-shadow: var(--shadow-heavy);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+}
+
+.presentation-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+}
+
+.presentation-card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(0, 102, 255, 0.08) 0%, transparent 60%);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.card-inner {
+    position: relative;
+    z-index: 1;
+}
+
+.presentation-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 4px solid var(--primary-color);
+    box-shadow: 0 0 30px rgba(0, 102, 255, 0.3);
+    margin-bottom: 1.5rem;
+    transition: var(--transition);
+}
+
+.presentation-avatar:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 40px rgba(0, 102, 255, 0.5);
+}
+
+.presentation-name {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    background: linear-gradient(135deg, var(--text-primary), var(--primary-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.presentation-title {
+    font-size: 1rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.presentation-tagline {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    padding: 0 1rem;
+}
+
+.presentation-socials {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    text-decoration: none;
+    font-size: 1.25rem;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.social-link::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: var(--transition);
+}
+
+.social-link:hover::before {
+    left: 100%;
+}
+
+.social-link:hover {
+    transform: translateY(-4px);
+}
+
+.social-link.linkedin {
+    background: linear-gradient(135deg, #0077B5, #005885);
+    color: white;
+}
+
+.social-link.youtube {
+    background: linear-gradient(135deg, #FF0000, #CC0000);
+    color: white;
+}
+
+.social-link.twitter {
+    background: linear-gradient(135deg, #000000, #333333);
+    color: white;
+}
+
+.social-link.github {
+    background: linear-gradient(135deg, #333, #24292e);
+    color: white;
+}
+
 .hero-section::before {
     content: '';
     position: absolute;
@@ -596,6 +736,20 @@ body {
         padding: 6rem 1rem 2rem;
     }
     
+    .presentation-card {
+        padding: 2rem 1.5rem;
+        margin-bottom: 3rem;
+    }
+    
+    .presentation-avatar {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .presentation-name {
+        font-size: 1.75rem;
+    }
+    
     .profile-container {
         grid-template-columns: 1fr;
         text-align: center;
@@ -632,6 +786,33 @@ body {
     
     .hero-subtitle {
         font-size: 1rem;
+    }
+    
+    .presentation-card {
+        padding: 1.5rem 1rem;
+    }
+    
+    .presentation-avatar {
+        width: 80px;
+        height: 80px;
+    }
+    
+    .presentation-name {
+        font-size: 1.5rem;
+    }
+    
+    .presentation-title {
+        font-size: 0.9rem;
+    }
+    
+    .presentation-tagline {
+        font-size: 0.85rem;
+    }
+    
+    .social-link {
+        width: 42px;
+        height: 42px;
+        font-size: 1.1rem;
     }
     
     .tags-container {
