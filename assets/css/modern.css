@@ -293,21 +293,49 @@ body {
 .presentation-socials {
     display: flex;
     justify-content: center;
-    gap: 1rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    max-width: 220px;
+    margin: 0 auto;
 }
 
 .social-link {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 48px;
-    height: 48px;
+    width: 44px;
+    height: 44px;
     border-radius: 50%;
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.1rem;
     transition: var(--transition);
     position: relative;
     overflow: hidden;
+    flex-shrink: 0;
+}
+
+@media (max-width: 768px) {
+    .presentation-socials {
+        max-width: 200px;
+    }
+    
+    .social-link {
+        width: 42px;
+        height: 42px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .presentation-socials {
+        max-width: 180px;
+    }
+    
+    .social-link {
+        width: 38px;
+        height: 38px;
+        font-size: 0.9rem;
+    }
 }
 
 .social-link::before {
@@ -346,6 +374,21 @@ body {
 
 .social-link.github {
     background: linear-gradient(135deg, #333, #24292e);
+    color: white;
+}
+
+.social-link.patreon {
+    background: linear-gradient(135deg, #FF424D, #FF424D);
+    color: white;
+}
+
+.social-link.instagram {
+    background: linear-gradient(135deg, #E4405F, #C13584);
+    color: white;
+}
+
+.social-link.blog {
+    background: linear-gradient(135deg, #0a0a0a, #333);
     color: white;
 }
 
@@ -904,13 +947,7 @@ body {
     .presentation-tagline {
         font-size: 0.85rem;
     }
-
-    .social-link {
-        width: 42px;
-        height: 42px;
-        font-size: 1.1rem;
-    }
-
+    
     .expertise-grid {
         grid-template-columns: 1fr;
     }
