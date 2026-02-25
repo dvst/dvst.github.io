@@ -135,13 +135,91 @@ body {
     position: relative;
 }
 
+/* Main Grid Layout */
+.main-grid {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.left-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.right-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.interests-card {
+    flex: 1;
+}
+
+.video-section {
+    flex: 1;
+}
+
+.video-section .video-container {
+    min-height: 300px;
+    height: 100%;
+}
+
+.video-section .video-container iframe {
+    height: 100%;
+    min-height: 350px;
+}
+
+/* Expertise Grid */
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.expertise-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem 1.25rem;
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.1), rgba(0, 212, 170, 0.05));
+    border: 1px solid var(--border-color);
+    border-radius: 12px;
+    transition: var(--transition);
+    cursor: default;
+}
+
+.expertise-item:hover {
+    transform: translateY(-3px);
+    border-color: var(--primary-color);
+    box-shadow: 0 8px 20px rgba(0, 102, 255, 0.2);
+    background: linear-gradient(135deg, rgba(0, 102, 255, 0.15), rgba(0, 212, 170, 0.1));
+}
+
+.expertise-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 8px;
+    font-size: 1rem;
+    color: white;
+}
+
+.expertise-label {
+    font-weight: 500;
+    color: var(--text-primary);
+    font-size: 0.95rem;
+}
+
 /* Presentation Card */
 .presentation-card {
-    max-width: 480px;
-    margin: 0 auto 4rem;
     background: var(--bg-card);
     border-radius: 24px;
-    padding: 3rem 2rem;
+    padding: 2.5rem 2rem;
     box-shadow: var(--shadow-heavy);
     border: 1px solid var(--border-color);
     position: relative;
@@ -725,6 +803,17 @@ body {
 }
 
 /* Responsive design */
+@media (max-width: 1024px) {
+    .main-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .left-column,
+    .right-column {
+        width: 100%;
+    }
+}
+
 @media (max-width: 768px) {
     .navbar-container {
         padding: 0 1rem;
@@ -736,9 +825,12 @@ body {
         padding: 6rem 1rem 2rem;
     }
     
+    .main-grid {
+        gap: 1.5rem;
+    }
+    
     .presentation-card {
         padding: 2rem 1.5rem;
-        margin-bottom: 3rem;
     }
     
     .presentation-avatar {
@@ -813,6 +905,22 @@ body {
         width: 42px;
         height: 42px;
         font-size: 1.1rem;
+    }
+    
+    .video-section .video-container iframe {
+        min-height: 200px;
+    }
+    
+    .expertise-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .expertise-item {
+        padding: 0.875rem 1rem;
+    }
+    
+    .expertise-label {
+        font-size: 0.9rem;
     }
     
     .tags-container {

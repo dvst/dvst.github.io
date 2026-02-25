@@ -81,55 +81,74 @@
     </nav>
 
     <main id="body">
-        <!-- Presentation Card - Contact & Social Links -->
-        <section class="presentation-card">
-            <div class="card-inner">
-                <img src="./assets/images/javitech_co.png" alt="Javier Perez Profile" class="presentation-avatar">
-                <h1 class="presentation-name">Javier Perez</h1>
-                <p class="presentation-title">Site Reliability Engineer & DevOps Expert</p>
-                <p class="presentation-tagline">I help companies build scalable, secure, and resilient infrastructure.</p>
-                <nav class="presentation-socials">
-                    <a target="_blank" href="https://www.linkedin.com/in/javierperezp" class="social-link linkedin" title="LinkedIn">
-                        <i class="fab fa-linkedin-in"></i>
-                    </a>
-                    <a target="_blank" href="https://youtube.com/@javitech_co?sub_confirmation=1" class="social-link youtube" title="YouTube">
-                        <i class="fab fa-youtube"></i>
-                    </a>
-                    <a target="_blank" href="https://twitter.com/intent/user?screen_name=javitech_co" class="social-link twitter" title="X (Twitter)">
-                        <i class="fab fa-x-twitter"></i>
-                    </a>
-                    <a target="_blank" href="https://github.com/dvst" class="social-link github" title="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </nav>
+        <!-- Main Grid Layout -->
+        <div class="main-grid">
+            <!-- Left Column: Presentation Card -->
+            <div class="left-column">
+                <section class="presentation-card">
+                    <div class="card-inner">
+                        <img src="./assets/images/javitech_co.png" alt="Javier Perez Profile" class="presentation-avatar">
+                        <h1 class="presentation-name">Javier Perez</h1>
+                        <p class="presentation-title">Site Reliability Engineer & DevOps Expert</p>
+                        <p class="presentation-tagline">I help companies build scalable, secure, and resilient infrastructure.</p>
+                        <nav class="presentation-socials">
+                            <a target="_blank" href="https://www.linkedin.com/in/javierperezp" class="social-link linkedin" title="LinkedIn">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a target="_blank" href="https://youtube.com/@javitech_co?sub_confirmation=1" class="social-link youtube" title="YouTube">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                            <a target="_blank" href="https://twitter.com/intent/user?screen_name=javitech_co" class="social-link twitter" title="X (Twitter)">
+                                <i class="fab fa-x-twitter"></i>
+                            </a>
+                            <a target="_blank" href="https://github.com/dvst" class="social-link github" title="GitHub">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </nav>
+                    </div>
+                </section>
             </div>
-        </section>
-        <!-- Interests Section -->
-        <section class="card">        
-            <h2><i class="fas fa-code"></i> Interests & Expertise</h2>
-            <div class="tags-container">
-                <span class="tag">System Design</span>
-                <span class="tag">AWS</span>
-                <span class="tag">Infrastructure as Code</span>
-                <span class="tag">CI/CD</span>
-                <span class="tag">Security</span>
-                <span class="tag">User Experience</span>
-                <span class="tag">Artificial Intelligence</span>
+            <!-- Right Column: Interests & Expertise -->
+            <div class="right-column">
+                <section class="card interests-card">
+                    <h2><i class="fas fa-code"></i> Interests & Expertise</h2>
+                    <div class="expertise-grid">
+                        <div class="expertise-item">
+                            <span class="expertise-icon"><i class="fas fa-server"></i></span>
+                            <span class="expertise-label">System Design</span>
+                        </div>
+                        <div class="expertise-item">
+                            <span class="expertise-icon"><i class="fab fa-aws"></i></span>
+                            <span class="expertise-label">AWS</span>
+                        </div>
+                        <div class="expertise-item">
+                            <span class="expertise-icon"><i class="fas fa-file-code"></i></span>
+                            <span class="expertise-label">Infrastructure as Code</span>
+                        </div>
+                        <div class="expertise-item">
+                            <span class="expertise-icon"><i class="fas fa-loop"></i></span>
+                            <span class="expertise-label">CI/CD</span>
+                        </div>
+                        <div class="expertise-item">
+                            <span class="expertise-icon"><i class="fas fa-shield-alt"></i></span>
+                            <span class="expertise-label">Security</span>
+                        </div>
+                        <div class="expertise-item">
+                            <span class="expertise-icon"><i class="fas fa-user"></i></span>
+                            <span class="expertise-label">User Experience</span>
+                        </div>
+                        <div class="expertise-item">
+                            <span class="expertise-icon"><i class="fas fa-brain"></i></span>
+                            <span class="expertise-label">Artificial Intelligence</span>
+                        </div>
+                        <div class="expertise-item">
+                            <span class="expertise-icon"><i class="fas fa-cloud"></i></span>
+                            <span class="expertise-label">Cloud Architecture</span>
+                        </div>
+                    </div>
+                </section>
             </div>
-        </section>
-        <!-- Latest Video Section -->
-        <section class="card">
-            <h2><i class="fab fa-youtube"></i> Latest Content</h2>
-            <p class="mb-4">Check out my latest insights on DevOps, SRE practices, and cloud architecture.</p>
-            <div class="video-container">
-                <iframe src="https://www.youtube.com/embed/o2aGT5SJeJI?si=D8FjLz5VZOsjCAci&amp;controls=1" 
-                        title="Latest YouTube Video" 
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
-                        referrerpolicy="strict-origin-when-cross-origin" 
-                        allowfullscreen>
-                </iframe>
-            </div>
-        </section>
+        </div>
     </main>
 <footer class="extended-footer">
     <div class="footer-container">
