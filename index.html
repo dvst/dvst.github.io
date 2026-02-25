@@ -159,6 +159,44 @@
             </div>
         </div>
     </main>
+
+    <!-- Certifications Section -->
+    <section class="certifications-section">
+        <h2 class="section-title"><i class="fas fa-certificate"></i> Certifications</h2>
+        <div class="certifications-grid">
+            <div class="certification-card" data-cert="aws-ml-assoc">
+                <img src="./assets/images/certs/aws-ml-assoc.png" alt="AWS Certified Machine Learning Engineer – Associate">
+            </div>
+            <div class="certification-card" data-cert="github-actions">
+                <img src="./assets/images/certs/github-actions.png" alt="GitHub Actions">
+            </div>
+            <div class="certification-card" data-cert="aws-devops-pro">
+                <img src="./assets/images/certs/aws-devops-pro.png" alt="AWS Certified DevOps Engineer – Professional">
+            </div>
+            <div class="certification-card" data-cert="kube-developer">
+                <img src="./assets/images/certs/kube-developer.png" alt="CKAD: Certified Kubernetes Application Developer">
+            </div>
+            <div class="certification-card" data-cert="azure-admin">
+                <img src="./assets/images/certs/microsoft-certified-associate-badge.svg" alt="Microsoft Certified: Azure Administrator Associate">
+            </div>
+            <div class="certification-card grayscale" data-cert="google-architect-pro">
+                <img src="./assets/images/certs/google-architect-pro.png" alt="Google Cloud Certified Professional Cloud Architect">
+            </div>
+            <div class="certification-card grayscale" data-cert="aws-arch-assoc">
+                <img src="./assets/images/certs/aws-arch-assoc.png" alt="AWS Certified Solutions Architect – Associate">
+            </div>
+            <div class="certification-card grayscale" data-cert="aws-developer-assoc">
+                <img src="./assets/images/certs/aws-developer-assoc.png" alt="AWS Certified Developer – Associate">
+            </div>
+            <div class="certification-card grayscale" data-cert="aws-sysops-assoc">
+                <img src="./assets/images/certs/aws-sysops-assoc.png" alt="AWS Certified SysOps Administrator – Associate">
+            </div>
+            <div class="certification-card grayscale" data-cert="aws-arch-pro">
+                <img src="./assets/images/certs/aws-arch-pro.png" alt="AWS Certified Solutions Architect – Professional">
+            </div>
+        </div>
+    </section>
+
 <footer class="extended-footer">
     <div class="footer-container">
         <div class="footer-column">
@@ -243,6 +281,70 @@
         }
         return null;
     }
+</script>
+<script>
+    const certifications = {
+        'aws-ml-assoc': {
+            name: 'AWS Certified Machine Learning Engineer – Associate',
+            issuer: 'Amazon Web Services',
+            url: 'https://www.credly.com/badges/1973b786-184d-436e-95a1-6ae1a09a840e'
+        },
+        'github-actions': {
+            name: 'GitHub Actions',
+            issuer: 'GitHub',
+            url: 'https://www.credly.com/badges/88b51819-df14-4f0b-8c7c-06ab940690f3'
+        },
+        'aws-devops-pro': {
+            name: 'AWS Certified DevOps Engineer – Professional',
+            issuer: 'Amazon Web Services',
+            url: 'https://www.credly.com/badges/54c8a6f0-08f7-478d-baee-7d4c4c77854d'
+        },
+        'kube-developer': {
+            name: 'CKAD: Certified Kubernetes Application Developer',
+            issuer: 'Cloud Native Computing Foundation',
+            url: 'https://www.credly.com/badges/2a976941-2483-4aca-a2ec-d66e3a084c9e'
+        },
+        'azure-admin': {
+            name: 'Microsoft Certified: Azure Administrator Associate',
+            issuer: 'Microsoft',
+            url: 'https://learn.microsoft.com/en-us/users/javitech/credentials/f84f3f9fa61bae7d'
+        },
+        'google-architect-pro': {
+            name: 'Google Cloud Certified Professional Cloud Architect',
+            issuer: 'Google Cloud',
+            url: 'https://www.credly.com/badges/1b6ec413-8cfe-40d4-9ccb-84711e84dd4a'
+        },
+        'aws-arch-assoc': {
+            name: 'AWS Certified Solutions Architect – Associate',
+            issuer: 'Amazon Web Services',
+            url: 'https://www.credly.com/badges/a4f237c9-62b7-406b-ad44-c67a9482014f'
+        },
+        'aws-developer-assoc': {
+            name: 'AWS Certified Developer – Associate',
+            issuer: 'Amazon Web Services',
+            url: 'https://www.credly.com/badges/36f301c6-345a-4785-b6d4-d63f855c3871'
+        },
+        'aws-sysops-assoc': {
+            name: 'AWS Certified SysOps Administrator – Associate',
+            issuer: 'Amazon Web Services',
+            url: 'https://www.credly.com/badges/a4cb76fa-6869-4e2e-92e3-96d56cd53236'
+        },
+        'aws-arch-pro': {
+            name: 'AWS Certified Solutions Architect – Professional',
+            issuer: 'Amazon Web Services',
+            url: 'https://www.credly.com/badges/4f5be524-d216-4cfd-841c-736add89a9b7'
+        }
+    };
+
+    document.querySelectorAll('.certification-card').forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', () => {
+            const certId = card.getAttribute('data-cert');
+            if (certId && certifications[certId]) {
+                window.open(certifications[certId].url, '_blank');
+            }
+        });
+    });
 </script>
     <script src="./assets/js/modern.js"></script>
 </body>
