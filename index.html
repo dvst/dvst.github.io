@@ -288,7 +288,16 @@
     }
 </script>
 <script>
-    // Hamburger menu toggle
+    // ===========================================
+    // WHATSAPP CONFIGURATION - Easy to customize
+    // ===========================================
+    const WHATSAPP_NUMBER = "+573006840891";  // Include + prefix (international format)
+    const WHATSAPP_MESSAGE_EN = "Hi! I'm interested in your services.";
+    const WHATSAPP_MESSAGE_ES = "¡Hola! Estoy interesado en tus servicios.";
+
+    // ===========================================
+    // HAMBURGER MENU TOGGLE
+    // ===========================================
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
     const navLinks = document.querySelectorAll('.nav-menu .nav-links a');
@@ -392,6 +401,43 @@
         });
     });
 </script>
+<a id="whatsapp-float" href="#" class="whatsapp-float" aria-label="Contact on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+</a>
+<script>
+    // ===========================================
+    // WHATSAPP FLOATING BUTTON
+    // ===========================================
+    function initWhatsAppButton() {
+        const whatsappLink = document.getElementById('whatsapp-float');
+        if (!whatsappLink) return;
+
+        // Get current language
+        const currentLang = window.languageSwitcher ? window.languageSwitcher.getCurrentLanguage() : 'en';
+        updateWhatsAppLink(whatsappLink, currentLang);
+    }
+
+    function updateWhatsAppLink(whatsappLink, lang) {
+        const message = lang === 'es' ? WHATSAPP_MESSAGE_ES : WHATSAPP_MESSAGE_EN;
+        const phoneNumber = WHATSAPP_NUMBER.replace(/^\+/, '');
+        const encodedMessage = encodeURIComponent(message);
+        const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+        whatsappLink.href = whatsappUrl;
+    }
+
+    // Initialize when DOM is ready
+    document.addEventListener('DOMContentLoaded', function() {
+        setTimeout(initWhatsAppButton, 100);
+        
+        // Listen for language toggle to update WhatsApp link
+        document.getElementById('language-toggle').addEventListener('click', function() {
+            setTimeout(function() {
+                const whatsappLink = document.getElementById('whatsapp-float');
+                if (whatsappLink && window.languageSwitcher) {
+                    updateWhatsAppLink(whatsappLink, window.languageSwitcher.getCurrentLanguage());
+                }
+            }, 200);
+        });
+    });
+</script>
     <script src="./assets/js/modern.js"></script>
-</body>
-</html>
