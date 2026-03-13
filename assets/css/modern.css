@@ -935,9 +935,7 @@ body {
 
 @media (max-width: 768px) {
     .navbar-container {
-        padding: 0 1rem;
-        flex-direction: column;
-        gap: 1rem;
+        padding: 0.5rem 1rem;
     }
 
     #body {
@@ -1104,23 +1102,6 @@ body {
     box-shadow: var(--shadow-medium) !important;
 }
 
-/* Enhanced mobile navigation */
-@media (max-width: 768px) {
-    .navbar-container {
-        flex-direction: column;
-        gap: 1rem;
-        padding: 1rem;
-    }
-
-    .nav-links {
-        order: 2;
-    }
-
-    .nav-cta {
-        order: 1;
-    }
-}
-
 /* Scroll indicator */
 .scroll-indicator {
     position: fixed;
@@ -1204,5 +1185,84 @@ body {
 
     .hero-section {
         margin-bottom: 3rem;
+    }
+}
+
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    transition: var(--transition);
+    order: 1;
+}
+
+.hamburger:hover {
+    color: var(--primary-color);
+}
+
+.hamburger .fa-times {
+    color: var(--primary-color);
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+}
+
+/* Enhanced mobile navigation */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        flex-shrink: 0;
+    }
+
+    .navbar-container {
+        flex-wrap: wrap;
+        padding: 0.5rem 1rem;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .nav-menu {
+        width: 100%;
+        overflow: hidden;
+        max-height: 0;
+        transition: max-height 0.3s ease-in-out;
+        order: 3;
+    }
+
+    .nav-menu.active {
+        max-height: 300px;
+    }
+
+    .nav-menu .nav-links {
+        flex-direction: column;
+        width: 100%;
+        padding: 1rem 0;
+        gap: 0.5rem;
+    }
+
+    .nav-menu .nav-links a {
+        width: 100%;
+        text-align: left;
+        padding: 0.75rem 1rem;
+    }
+
+    #body {
+        padding: 5rem 1rem 2rem;
+    }
+
+    .nav-links a {
+        padding: 0.5rem 0.75rem;
+        font-size: 0.9rem;
     }
 }
